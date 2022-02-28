@@ -11,8 +11,8 @@ It is worth mentioning that a simply training strategy is adopted in our codes, 
 Steps:
 1. Download the HANS dataset (heuristics_evaluation_set.txt), and save it in the folder "data/HANS/". 
 2. Download the MNLI dataset, and save it in the folder "data/MNLI/". 
-3. Run the file data/HANS/dependency_output_hans.py and data/MNLI/dependency_output_mnli.py, and generate the .tsv file which save the dependency relationship. 
-4. Run the train_mnli.py to train the model and the evaluation results on MNLI. Note that, for the first time running of train_mnli.py, please set the parameter of function fetch_data_and_graph force_re_parsing_depen=True, which forces generating the .pt file from the .tsv file and saves the dependency relationship in a tensor form. 
+3. Run the file data/HANS/dependency_output_hans.py and data/MNLI/dependency_output_mnli.py, and generate the .tsv file which hold the dependency relationship. 
+4. Run the train_mnli.py to train the model and the evaluation results on MNLI. Note that, for the first time running of train_mnli.py, please set the parameter force_re_parsing_depen=True for the function fetch_data_and_graph, which forces generating the .pt file from the .tsv file and hold the dependency relationship in a tensor form. 
 
 Test on HANS:
 1. Set hyps["eval_on_hans"]=True in train_mnli.py. 
