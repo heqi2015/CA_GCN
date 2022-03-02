@@ -16,7 +16,6 @@ Steps:
 
 Test on HANS:
 1. Set hyps["eval_on_hans"]=True in train_mnli.py. 
-2. Set hyps["eval_model_folder"] to a folder containing a trained model, such as "results/bert_co_attn/seed69/lr1e-04_202202171618".
+2. Set hyps["eval_model_folder"] to a folder containing a trained model, such as "results/bert_co_attn/seed69/lr1e-04_202202171618". Set hyps["eval_model_path"] to the saved model such as obtained in the last epoch, and hyps["eval_data_list"] to the .tsv file such as "data/HANS/dependency_hans.tsv".
 3. Run train_mnli.py, and obtain the result on HANS, which is saved in a .txt form under the folder hyps["eval_model_folder"]. 
-4. Set hyps["eval_model_path"] to the saved model such as obtained in the last epoch, and hyps["eval_data_list"] to the .tsv file such as "data/HANS/dependency_hans.tsv".
-5. Calculate the index on HANS by "python evaluate_heur_output.py [hans_preds_file] > [result_file]" where [hans_preds_file] is set to hyps["eval_hans_result"] with the absolute path. 
+4. Calculate the index on HANS by "python evaluate_heur_output.py [hans_preds_file] > [result_file]" where [hans_preds_file] is set to hyps["eval_hans_result"] with the absolute path. 
